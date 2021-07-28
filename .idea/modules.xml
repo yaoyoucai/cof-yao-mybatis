@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cof-api-cache/cof-yao-mybatis.cof-api-cache.main.iml" filepath="$PROJECT_DIR$/.idea/modules/cof-api-cache/cof-yao-mybatis.cof-api-cache.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cof-api-cache/cof-yao-mybatis.cof-api-cache.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cof-api-cache/cof-yao-mybatis.cof-api-cache.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cof-api-platform/cof-yao-mybatis.cof-api-platform.test.iml" filepath="$PROJECT_DIR$/.idea/modules/cof-api-platform/cof-yao-mybatis.cof-api-platform.test.iml" />
+    </modules>
+  </component>
+</project>

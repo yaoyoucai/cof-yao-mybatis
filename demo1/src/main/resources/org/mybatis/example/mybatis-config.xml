@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+
+    <!--properties 位置必须在最上面-->
+    <properties resource="org/mybatis/example/config.properties">
+        <!-- 如果想使用默认值特性，则需要启用以下代码 -->
+        <property name="org.apache.ibatis.parsing.PropertyParser.enable-default-value" value="true"/>
+
+        <!-- 默认值的分隔符默认为: ':',可以通过以下方式修改 -->
+        <property name="org.apache.ibatis.parsing.PropertyParser.default-value-separator" value="?:"/>
+
+    </properties>
+
+    <!--类型别名-->
+    <typeAliases>
+      <!--为包下面的所有类设置别名，别名为类名小写-->
+      <package name="org.mybatis.example"/>
+
+    </typeAliases>
+
+    <!--类型处理器-->
+    <typeHandlers>
+        <package name="org.mybatis.example"/>
+    </typeHandlers>
+
+    <!--对象工厂-->
+    <objectFactory type="org.mybatis.example.objectfactory.ExampleObjectFactory">
+        <property name="someProperty" value="100"/>
+    </objectFactory>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.10.33:3306/test?characterEncoding=utf8&amp;useUnicode=true&amp;serverTimezone=Asia/Shanghai&amp;useSSL=false"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password?:123456}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="org/mybatis/example/BlogMapper.xml"/>
+    </mappers>
+
+
+</configuration>

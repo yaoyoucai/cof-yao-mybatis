@@ -1,0 +1,4 @@
+rootProject.name = 'cof-yao-mybatis'
+
+include 'demo1'
+include 'mapping_file'
