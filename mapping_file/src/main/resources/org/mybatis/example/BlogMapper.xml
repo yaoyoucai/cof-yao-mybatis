@@ -2,8 +2,12 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="org.mybatis.example.BlogMapper" >
-    <select id="selectBlog" resultType="blog">
+<mapper namespace="org.mybatis.example.mapper.BlogMapper" >
+    <select id="selectBlog" resultType="blog" databaseId="mysql">
+        select * from Blog where id = #{id}
+    </select>
+
+    <select id="selectBlog" resultType="blog" databaseId="postgresql">
         select * from Blog where id = #{id}
     </select>
 

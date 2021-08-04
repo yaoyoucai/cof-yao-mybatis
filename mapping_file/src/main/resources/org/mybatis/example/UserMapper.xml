@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mybatis.example.mapper.UserMapper" >
+    <select id="getAllUsers" resultMap="results" resultOrdered="true">
+        select * from users order by id
+    </select>
+
+    <resultMap type="User" id="results">
+        <id column="id" property="id"/>
+        <result property="name" column="name"/>
+        <collection property="groups" ofType="string">
+            <result column="group_id"/>
+        </collection>
+        <collection property="roles" ofType="string">
+            <result column="rol_id"/>
+        </collection>
+    </resultMap>
+
+   <!--测试association属性-->
+    <select id="queryById" parameterType="int" resultMap="">
+        select from u
+    </select>
+</mapper>

@@ -1,4 +1,6 @@
-package org.mybatis.example;
+package org.mybatis.example.mapper;
+
+import org.mybatis.example.Blog;
 
 import java.util.HashMap;
 import java.util.List;
